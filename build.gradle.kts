@@ -1,20 +1,14 @@
 plugins {
     id("org.jetbrains.kotlin.multiplatform") version "1.9.0"
-}
-
-buildscript {
-    dependencies {
-        classpath("org.jetbrains.kotlinx:atomicfu-gradle-plugin:0.22.0")
-    }
+    id("org.jetbrains.kotlin.plugin.atomicfu") version "1.9.0"
 }
 
 group = "com.example"
 
-apply(plugin = "kotlinx-atomicfu")
-
-//atomicfu {
-//    transformJvm = true
-//}
+atomicfuCompilerPlugin {
+    isJvmIrTransformationEnabled = true
+    isJsIrTransformationEnabled = true
+}
 
 kotlin {
     @Suppress("OPT_IN_USAGE")
