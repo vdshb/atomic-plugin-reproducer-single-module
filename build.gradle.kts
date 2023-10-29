@@ -12,9 +12,9 @@ group = "com.example"
 
 apply(plugin = "kotlinx-atomicfu")
 
-//atomicfu {
-//    transformJvm = true
-//}
+atomicfu {
+    transformJvm = true
+}
 
 kotlin {
     @Suppress("OPT_IN_USAGE")
